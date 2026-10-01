@@ -1982,7 +1982,8 @@
       "reasoning",
       "structured-output",
       "tool-use",
-      "vision"
+      "vision",
+      "explicit-caching"
     ],
     "supported_specifications": ["v2", "v3", "v4"],
     "modalities": {
@@ -9218,7 +9219,7 @@
     "max_tokens": 0,
     "type": "video",
     "zdr": "none",
-    "no_training": "none",
+    "no_training": "all",
     "supported_specifications": ["v3", "v4"],
     "modalities": {
       "input": ["text"],
@@ -9271,7 +9272,7 @@
     "max_tokens": 0,
     "type": "video",
     "zdr": "none",
-    "no_training": "none",
+    "no_training": "all",
     "supported_specifications": ["v3", "v4"],
     "modalities": {
       "input": ["text"],
@@ -9315,7 +9316,7 @@
     "max_tokens": 0,
     "type": "video",
     "zdr": "none",
-    "no_training": "none",
+    "no_training": "all",
     "supported_specifications": ["v3", "v4"],
     "modalities": {
       "input": ["text"],
@@ -9374,7 +9375,7 @@
     "max_tokens": 0,
     "type": "video",
     "zdr": "none",
-    "no_training": "none",
+    "no_training": "all",
     "supported_specifications": ["v3", "v4"],
     "modalities": {
       "input": ["text"],
@@ -9440,7 +9441,7 @@
     "max_tokens": 0,
     "type": "video",
     "zdr": "none",
-    "no_training": "none",
+    "no_training": "all",
     "supported_specifications": ["v3", "v4"],
     "modalities": {
       "input": ["text"],
@@ -9490,7 +9491,7 @@
     "max_tokens": 0,
     "type": "video",
     "zdr": "none",
-    "no_training": "none",
+    "no_training": "all",
     "supported_specifications": ["v3", "v4"],
     "modalities": {
       "input": ["text"],
@@ -9573,7 +9574,7 @@
     "max_tokens": 0,
     "type": "video",
     "zdr": "none",
-    "no_training": "none",
+    "no_training": "all",
     "tags": ["video-generation"],
     "supported_specifications": ["v3", "v4"],
     "modalities": {
@@ -9640,7 +9641,7 @@
     "max_tokens": 0,
     "type": "video",
     "zdr": "none",
-    "no_training": "none",
+    "no_training": "all",
     "supported_specifications": ["v3", "v4"],
     "modalities": {
       "input": ["text"],
@@ -9706,7 +9707,7 @@
     "owned_by": "liquid",
     "name": "Liquid d1",
     "description": "Liquid d1 is a decision model for classification, routing, and scoring. It evaluates shared state against typed Choice, Score, and yes/no questions and returns structured answers with calibrated probabilities through the TypeSafe-compatible System One API.",
-    "context_window": 32000,
+    "context_window": 65536,
     "max_tokens": 0,
     "type": "evaluation",
     "zdr": "none",
@@ -9717,7 +9718,7 @@
       "output": ["text"]
     },
     "pricing": {
-      "input": "0",
+      "input": "0.00000004",
       "output": "0"
     }
   },
@@ -16330,6 +16331,17 @@
             "output": "0.00015",
             "input_cache_read": "0.000004"
           }
+        },
+        "ultrafast": {
+          "input": "0.00006",
+          "output": "0.0003",
+          "input_cache_read": "0.000006",
+          "long_context": {
+            "threshold": 272001,
+            "input": "0.00012",
+            "output": "0.00045",
+            "input_cache_read": "0.000012"
+          }
         }
       },
       "fast": {
@@ -19580,6 +19592,7 @@
       "input": ["text"],
       "output": ["image"]
     },
+    "deprecated_at": 1792137600000,
     "pricing": {
       "image_dimension_quality_pricing": [
         {
@@ -21735,44 +21748,6 @@
     }
   },
   {
-    "id": "stealth/pixel-canary",
-    "object": "model",
-    "created": 1755815280,
-    "released": 1790294400,
-    "owned_by": "stealth",
-    "name": "Pixel Canary",
-    "description": "Pixel Canary is an anonymous large model with strong coding capabilities and adjustable reasoning effort. It is well suited to web and mobile app development, helping developers build and refine applications across both platforms. Prompts and outputs may be retained for training by the provider.",
-    "context_window": 262144,
-    "max_tokens": 131072,
-    "type": "language",
-    "zdr": "none",
-    "no_training": "none",
-    "tags": ["reasoning", "implicit-caching", "vision"],
-    "supported_specifications": ["v2", "v3", "v4"],
-    "modalities": {
-      "input": ["text", "image"],
-      "output": ["text"]
-    },
-    "supported_parameters": [
-      "max_tokens",
-      "temperature",
-      "stop",
-      "reasoning",
-      "include_reasoning"
-    ],
-    "temperature": true,
-    "reasoning_options": [
-      {
-        "type": "effort",
-        "values": ["none", "low", "medium", "xhigh"]
-      }
-    ],
-    "pricing": {
-      "input": "0",
-      "output": "0"
-    }
-  },
-  {
     "id": "stepfun/step-3.5-flash",
     "object": "model",
     "created": 1755815280,
@@ -22234,6 +22209,50 @@
     "owned_by": "voyage",
     "name": "Voyage Rerank 2.5 Lite",
     "description": "A generalist reranker optimized for both latency and quality with instruction-following and multilingual support.",
+    "context_window": 32000,
+    "max_tokens": 32000,
+    "type": "reranking",
+    "zdr": "none",
+    "no_training": "all",
+    "supported_specifications": ["v2", "v3", "v4"],
+    "modalities": {
+      "input": ["text"],
+      "output": ["text"]
+    },
+    "pricing": {
+      "input": "0.00000002"
+    }
+  },
+  {
+    "id": "voyage/rerank-3",
+    "object": "model",
+    "created": 1755815280,
+    "released": 1790726400,
+    "owned_by": "voyage",
+    "name": "Voyage Rerank 3",
+    "description": "A general-purpose reranker optimized for retrieval accuracy.",
+    "context_window": 32000,
+    "max_tokens": 32000,
+    "type": "reranking",
+    "zdr": "none",
+    "no_training": "all",
+    "supported_specifications": ["v2", "v3", "v4"],
+    "modalities": {
+      "input": ["text"],
+      "output": ["text"]
+    },
+    "pricing": {
+      "input": "0.00000005"
+    }
+  },
+  {
+    "id": "voyage/rerank-3-lite",
+    "object": "model",
+    "created": 1755815280,
+    "released": 1790726400,
+    "owned_by": "voyage",
+    "name": "Voyage Rerank 3 Lite",
+    "description": "A fast, cost-effective reranker optimized for latency-sensitive retrieval.",
     "context_window": 32000,
     "max_tokens": 32000,
     "type": "reranking",

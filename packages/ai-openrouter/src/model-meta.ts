@@ -156,8 +156,8 @@ const _DEEPSEEK_DEEPSEEK_FLASH_LATEST = {
   pricing: {
     text: {
       input: {
-        normal: 0.02,
-        cached: 0.02,
+        normal: 0.0243,
+        cached: 0.0243,
       },
       output: {
         normal: 0.6,
@@ -193,11 +193,11 @@ const _DEEPSEEK_DEEPSEEK_PRO_LATEST = {
   pricing: {
     text: {
       input: {
-        normal: 0.15,
-        cached: 0.15,
+        normal: 0.19536,
+        cached: 0.006216,
       },
       output: {
-        normal: 3.5,
+        normal: 0.58608,
       },
     },
     image: 0,
@@ -231,8 +231,8 @@ const _DEEPSEEK_DEEPSEEK_V4_FLASH_LATEST = {
   pricing: {
     text: {
       input: {
-        normal: 0.01,
-        cached: 0.01,
+        normal: 0.0108,
+        cached: 0.0108,
       },
       output: {
         normal: 1.28,
@@ -332,11 +332,11 @@ const _MOONSHOTAI_KIMI_LATEST = {
   pricing: {
     text: {
       input: {
-        normal: 0.4,
-        cached: 0.4,
+        normal: 0.7066,
+        cached: 0.7066,
       },
       output: {
-        normal: 9,
+        normal: 10,
       },
     },
     image: 0,
@@ -587,15 +587,15 @@ const _Z_AI_GLM_LATEST = {
     ],
   },
   context_window: 1048576,
-  max_output_tokens: 131072,
+  max_output_tokens: 943718,
   pricing: {
     text: {
       input: {
-        normal: 0.13,
-        cached: 0.13,
+        normal: 0.06,
+        cached: 0.176,
       },
       output: {
-        normal: 4,
+        normal: 2.694,
       },
     },
     image: 0,
@@ -2579,17 +2579,11 @@ const DEEPSEEK_DEEPSEEK_V3_2_EXP = {
     output: ['text'],
     supports: [
       'frequencyPenalty',
-      'logitBias',
-      'logprobs',
       'maxCompletionTokens',
-      'presencePenalty',
       'reasoning',
       'responseFormat',
-      'seed',
-      'stop',
       'temperature',
       'toolChoice',
-      'topLogprobs',
       'topP',
     ],
   },
@@ -2632,15 +2626,15 @@ const DEEPSEEK_DEEPSEEK_V4_FLASH = {
     ],
   },
   context_window: 1048576,
-  max_output_tokens: 131072,
+  max_output_tokens: 384000,
   pricing: {
     text: {
       input: {
-        normal: 0.14,
-        cached: 0.028,
+        normal: 0.042,
+        cached: 0.0084,
       },
       output: {
-        normal: 0.28,
+        normal: 0.084,
       },
     },
     image: 0,
@@ -2674,8 +2668,8 @@ const DEEPSEEK_DEEPSEEK_V4_FLASH_0731 = {
   pricing: {
     text: {
       input: {
-        normal: 0.01,
-        cached: 0.01,
+        normal: 0.0108,
+        cached: 0.0108,
       },
       output: {
         normal: 1.28,
@@ -2749,11 +2743,11 @@ const DEEPSEEK_DEEPSEEK_V4_PRO = {
   pricing: {
     text: {
       input: {
-        normal: 0.95526,
-        cached: 0.079605,
+        normal: 0.2088,
+        cached: 0.0174,
       },
       output: {
-        normal: 1.91052,
+        normal: 0.4176,
       },
     },
     image: 0,
@@ -2786,11 +2780,11 @@ const DEEPSEEK_DEEPSEEK_V4_PRO_0813 = {
   pricing: {
     text: {
       input: {
-        normal: 1.32,
-        cached: 0.044,
+        normal: 0.66,
+        cached: 0.022,
       },
       output: {
-        normal: 3.96,
+        normal: 1.98,
       },
     },
     image: 0,
@@ -2823,11 +2817,11 @@ const DEEPSEEK_DEEPSEEK_V4_1_FLASH = {
   pricing: {
     text: {
       input: {
-        normal: 0.3,
-        cached: 0.006,
+        normal: 0.03,
+        cached: 0.01,
       },
       output: {
-        normal: 1.2,
+        normal: 0.5,
       },
     },
     image: 0,
@@ -5324,7 +5318,7 @@ const MINIMAX_MINIMAX_M1 = {
   pricing: {
     text: {
       input: {
-        normal: 0.4,
+        normal: 0.55,
         cached: 0,
       },
       output: {
@@ -6462,12 +6456,12 @@ const MOONSHOTAI_KIMI_K2_THINKING = {
     ],
   },
   context_window: 262144,
-  max_output_tokens: 98304,
+  max_output_tokens: 235929,
   pricing: {
     text: {
       input: {
         normal: 0.6,
-        cached: 0.15,
+        cached: 0,
       },
       output: {
         normal: 2.5,
@@ -6541,11 +6535,11 @@ const MOONSHOTAI_KIMI_K2_6 = {
   pricing: {
     text: {
       input: {
-        normal: 0.65,
-        cached: 0.15,
+        normal: 0.43415,
+        cached: 0.07312,
       },
       output: {
-        normal: 3.41,
+        normal: 1.828,
       },
     },
     image: 0,
@@ -6616,11 +6610,11 @@ const MOONSHOTAI_KIMI_K3 = {
   pricing: {
     text: {
       input: {
-        normal: 3,
-        cached: 0.3,
+        normal: 0.7066,
+        cached: 0.7066,
       },
       output: {
-        normal: 15,
+        normal: 10,
       },
     },
     image: 0,
@@ -7156,15 +7150,15 @@ const NVIDIA_NEMOTRON_3_5_LIGHTNING = {
     ],
   },
   context_window: 262144,
-  max_output_tokens: 32768,
+  max_output_tokens: 131072,
   pricing: {
     text: {
       input: {
-        normal: 0.06,
-        cached: 0.03,
+        normal: 0.0595,
+        cached: 0.02975,
       },
       output: {
-        normal: 0.16,
+        normal: 0.17,
       },
     },
     image: 0,
@@ -9771,64 +9765,6 @@ const OPENAI_GPT_6_1_SOL_PRO = {
     image: 0,
   },
 } as const
-const OPENAI_GPT_6_1_SOL_PRO_BATCH = {
-  id: 'openai/gpt-6.1-sol-pro:batch',
-  name: 'OpenAI: GPT-6.1 Sol Pro (batch)',
-  supports: {
-    input: ['document', 'image', 'text'],
-    output: ['text'],
-    supports: [
-      'maxCompletionTokens',
-      'reasoning',
-      'responseFormat',
-      'seed',
-      'toolChoice',
-    ],
-  },
-  context_window: 1050000,
-  max_output_tokens: 128000,
-  pricing: {
-    text: {
-      input: {
-        normal: 1,
-        cached: 1.3,
-      },
-      output: {
-        normal: 5,
-      },
-    },
-    image: 0,
-  },
-} as const
-const OPENAI_GPT_6_1_SOL_BATCH = {
-  id: 'openai/gpt-6.1-sol:batch',
-  name: 'OpenAI: GPT-6.1 Sol (batch)',
-  supports: {
-    input: ['document', 'image', 'text'],
-    output: ['text'],
-    supports: [
-      'maxCompletionTokens',
-      'reasoning',
-      'responseFormat',
-      'seed',
-      'toolChoice',
-    ],
-  },
-  context_window: 1050000,
-  max_output_tokens: 128000,
-  pricing: {
-    text: {
-      input: {
-        normal: 1,
-        cached: 1.3,
-      },
-      output: {
-        normal: 5,
-      },
-    },
-    image: 0,
-  },
-} as const
 const OPENAI_GPT_AUDIO = {
   id: 'openai/gpt-audio',
   name: 'OpenAI: GPT Audio',
@@ -11119,15 +11055,15 @@ const QWEN_QWEN3_30B_A3B = {
     ],
   },
   context_window: 131072,
-  max_output_tokens: 8192,
+  max_output_tokens: 16384,
   pricing: {
     text: {
       input: {
-        normal: 0.13,
+        normal: 0.12,
         cached: 0,
       },
       output: {
-        normal: 0.52,
+        normal: 0.5,
       },
     },
     image: 0,
@@ -14079,7 +14015,7 @@ const XIAOMI_MIMO_V2_6_FLASH = {
       'topP',
     ],
   },
-  context_window: 1048576,
+  context_window: 1050000,
   max_output_tokens: 131072,
   pricing: {
     text: {
@@ -14493,11 +14429,11 @@ const Z_AI_GLM_5_1 = {
   pricing: {
     text: {
       input: {
-        normal: 1.4,
-        cached: 0.26,
+        normal: 0.9646,
+        cached: 0.17914,
       },
       output: {
-        normal: 4.4,
+        normal: 3.0316,
       },
     },
     image: 0,
@@ -14531,7 +14467,7 @@ const Z_AI_GLM_5_2 = {
   pricing: {
     text: {
       input: {
-        normal: 0.36,
+        normal: 0.41,
         cached: 0.26,
       },
       output: {
@@ -14565,15 +14501,15 @@ const Z_AI_GLM_5_3 = {
     ],
   },
   context_window: 1048576,
-  max_output_tokens: 943717,
+  max_output_tokens: 943718,
   pricing: {
     text: {
       input: {
-        normal: 1.4,
-        cached: 0.26,
+        normal: 0.2219,
+        cached: 0.1775,
       },
       output: {
-        normal: 4.4,
+        normal: 3.39,
       },
     },
     image: 0,
@@ -15722,17 +15658,11 @@ export type OpenRouterModelOptionsByName = {
     Pick<
       OpenRouterBaseOptions,
       | 'frequencyPenalty'
-      | 'logitBias'
-      | 'logprobs'
       | 'maxCompletionTokens'
-      | 'presencePenalty'
       | 'reasoning'
       | 'responseFormat'
-      | 'seed'
-      | 'stop'
       | 'temperature'
       | 'toolChoice'
-      | 'topLogprobs'
       | 'topP'
     >
   [DEEPSEEK_DEEPSEEK_V4_FLASH.id]: OpenRouterCommonOptions &
@@ -18445,24 +18375,6 @@ export type OpenRouterModelOptionsByName = {
       | 'seed'
       | 'toolChoice'
     >
-  [OPENAI_GPT_6_1_SOL_PRO_BATCH.id]: OpenRouterCommonOptions &
-    Pick<
-      OpenRouterBaseOptions,
-      | 'maxCompletionTokens'
-      | 'reasoning'
-      | 'responseFormat'
-      | 'seed'
-      | 'toolChoice'
-    >
-  [OPENAI_GPT_6_1_SOL_BATCH.id]: OpenRouterCommonOptions &
-    Pick<
-      OpenRouterBaseOptions,
-      | 'maxCompletionTokens'
-      | 'reasoning'
-      | 'responseFormat'
-      | 'seed'
-      | 'toolChoice'
-    >
   [OPENAI_GPT_AUDIO.id]: OpenRouterCommonOptions &
     Pick<
       OpenRouterBaseOptions,
@@ -20860,10 +20772,6 @@ export type OpenRouterModelInputModalitiesByName = {
   [OPENAI_GPT_6_SOL_BATCH.id]: ReadonlyArray<'document' | 'image' | 'text'>
   [OPENAI_GPT_6_1_SOL.id]: ReadonlyArray<'document' | 'image' | 'text'>
   [OPENAI_GPT_6_1_SOL_PRO.id]: ReadonlyArray<'document' | 'image' | 'text'>
-  [OPENAI_GPT_6_1_SOL_PRO_BATCH.id]: ReadonlyArray<
-    'document' | 'image' | 'text'
-  >
-  [OPENAI_GPT_6_1_SOL_BATCH.id]: ReadonlyArray<'document' | 'image' | 'text'>
   [OPENAI_GPT_AUDIO.id]: ReadonlyArray<'text' | 'audio'>
   [OPENAI_GPT_AUDIO_MINI.id]: ReadonlyArray<'text' | 'audio'>
   [OPENAI_GPT_CHAT_LATEST.id]: ReadonlyArray<'text' | 'image' | 'document'>
@@ -21333,8 +21241,6 @@ export const OPENROUTER_CHAT_MODELS = [
   OPENAI_GPT_6_SOL_BATCH.id,
   OPENAI_GPT_6_1_SOL.id,
   OPENAI_GPT_6_1_SOL_PRO.id,
-  OPENAI_GPT_6_1_SOL_PRO_BATCH.id,
-  OPENAI_GPT_6_1_SOL_BATCH.id,
   OPENAI_GPT_AUDIO.id,
   OPENAI_GPT_AUDIO_MINI.id,
   OPENAI_GPT_CHAT_LATEST.id,
@@ -21513,6 +21419,7 @@ export const OPENROUTER_VIDEO_MODELS = [
   'google/veo-3.1-fast',
   'google/veo-3.1-lite',
   'heygen/avatar-iv',
+  'heygen/heygen-video-1',
   'kwaivgi/kling-v3.0-pro',
   'kwaivgi/kling-v3.0-std',
   'kwaivgi/kling-video-o1',
@@ -21858,6 +21765,16 @@ export const OPENROUTER_VIDEO_MODEL_META = {
     sizes: null,
     generateAudio: false,
     seed: false,
+  },
+  'heygen/heygen-video-1': {
+    name: 'HeyGen: Video 1',
+    durations: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    resolutions: ['480p', '768p'],
+    aspectRatios: ['21:9', '16:9', '4:3', '1:1', '3:4', '9:16'],
+    frameImages: ['first_frame'],
+    sizes: null,
+    generateAudio: false,
+    seed: true,
   },
   'kwaivgi/kling-v3.0-pro': {
     name: 'Kling: Video v3.0 Pro',
@@ -22239,8 +22156,6 @@ export const OPENROUTER_COMBINED_TOOLS_AND_SCHEMA_MODELS: ReadonlySet<string> =
     OPENAI_GPT_6_SOL_BATCH.id,
     OPENAI_GPT_6_1_SOL.id,
     OPENAI_GPT_6_1_SOL_PRO.id,
-    OPENAI_GPT_6_1_SOL_PRO_BATCH.id,
-    OPENAI_GPT_6_1_SOL_BATCH.id,
     OPENAI_GPT_AUDIO.id,
     OPENAI_GPT_AUDIO_MINI.id,
     OPENAI_GPT_CHAT_LATEST.id,

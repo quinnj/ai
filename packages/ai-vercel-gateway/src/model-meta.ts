@@ -275,7 +275,6 @@ export const VERCEL_GATEWAY_CHAT_MODELS = [
   'spacexai/grok-tts',
   'spacexai/grok-voice-think-fast-1.0',
   'spacexai/grok-voice-think-fast-2.0',
-  'stealth/pixel-canary',
   'stepfun/step-3.5-flash',
   'stepfun/step-3.7-flash',
   'stepfun/step-5-preview',
@@ -347,7 +346,6 @@ export const VERCEL_GATEWAY_PROVIDERS = [
   'recraft',
   'sakana',
   'spacexai',
-  'stealth',
   'stepfun',
   'tencent',
   'thinkingmachines',
@@ -3166,16 +3164,6 @@ export type VercelGatewayChatModelProviderOptionsByName = {
       | 'reasoning'
       | 'include_reasoning'
     >
-  'stealth/pixel-canary': VercelGatewayCommonOptions &
-    Pick<
-      VercelGatewayBaseOptions,
-      | 'max_tokens'
-      | 'max_output_tokens'
-      | 'temperature'
-      | 'stop'
-      | 'reasoning'
-      | 'include_reasoning'
-    >
   'stepfun/step-3.5-flash': VercelGatewayCommonOptions &
     Pick<
       VercelGatewayBaseOptions,
@@ -3825,7 +3813,6 @@ export type VercelGatewayModelInputModalitiesByName = {
   'spacexai/grok-tts': readonly ['text']
   'spacexai/grok-voice-think-fast-1.0': readonly ['text', 'audio']
   'spacexai/grok-voice-think-fast-2.0': readonly ['text', 'audio']
-  'stealth/pixel-canary': readonly ['text', 'image']
   'stepfun/step-3.5-flash': readonly ['text', 'image']
   'stepfun/step-3.7-flash': readonly ['text', 'image']
   'stepfun/step-5-preview': readonly ['text', 'image']
