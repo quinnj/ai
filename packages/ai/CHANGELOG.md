@@ -1,5 +1,26 @@
 # @tanstack/ai
 
+## 0.64.0
+
+### Minor Changes
+
+- [#1578](https://github.com/TanStack/ai/pull/1578) [`a5fce7f`](https://github.com/TanStack/ai/commit/a5fce7f95b8b9c6eb57697aa1e3f587bf27483b9) - Run the server tools of one model turn at the same time. `chat()` used to run them one after another, so a turn with several slow tools took as long as all of them together.
+  - Every call is still prepared in call order (argument parse, input schema check, approval check, `onBeforeToolCall`). Then the server tools start together.
+  - `onBeforeToolCall` runs for every call before any tool of the turn starts. `onAfterToolCall` fires for each tool when it finishes. The model still gets the results in the order of its calls.
+  - If the run aborts before the tools start, no tool starts. Each call gets the error result "Operation aborted".
+  - If a tool or a hook throws, the other tools of the turn finish first. Then the error is thrown.
+  - `toolCacheMiddleware` no longer dedupes identical calls in one turn, because they run at the same time.
+  - Opt out with `chat({ toolExecution: 'sequential' })`.
+
+### Patch Changes
+
+- [#1579](https://github.com/TanStack/ai/pull/1579) [`3a09cf0`](https://github.com/TanStack/ai/commit/3a09cf04431a45810051ea5df6bb3935af421ddb) - Send Claude's thinking and tool errors back the way Claude sent them.
+  - A tool message with `error` now sends `tool_result.is_error: true`, so Claude sees that the tool failed.
+  - A `redacted_thinking` block is no longer dropped. It becomes a thinking part with `redacted: true`, an empty `content`, and the encrypted data in `signature`. The flag survives the stream, the UI messages, the wire, and stored threads, and the next request sends the block back as `{ type: 'redacted_thinking', data }`.
+  - On the AG-UI wire, a redacted block is its own reasoning message. Its id starts with `redacted_thinking-`, and the `REASONING_ENCRYPTED_VALUE` event's `entityId` points to that id. An AG-UI client keeps message ids, so it sends the block back as redacted data, not as a signature.
+  - A thinking block's signature now names its reasoning message in `entityId`, not the step. An AG-UI client attaches the signature to that message, so it can send it back.
+  - `ThinkingPart` and `ModelMessage['thinking']` have the new optional `redacted` field.
+
 ## 0.63.0
 
 ### Minor Changes
